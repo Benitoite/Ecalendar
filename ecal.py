@@ -8,7 +8,7 @@ numdays = int(diff.days)
 
 original_stdout = sys.stdout # Save a reference to the original standard output
 
-with open('el1.html', 'w') as f:
+with open('static/el1.html', 'w') as f:
     sys.stdout = f # Change the standard output to the file we created.
     print('''
 <!DOCTYPE html>
