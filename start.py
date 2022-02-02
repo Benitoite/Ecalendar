@@ -1,6 +1,6 @@
 while True:
     try:
-        !ecal.py
+        !python3 ecal.py
     except:
         pass
     time.sleep(330)
