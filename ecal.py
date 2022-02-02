@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta;
 import sys
+import os
 
+os.system("touch static/el1.html")
 today = datetime.today()
 electionday = datetime(2022, 6, 7, 0, 0, 0) 
 diff = today - electionday
@@ -15,6 +17,10 @@ with open('static/el1.html', 'w') as f:
 <html>
    <head>
       <title>E Calendar</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="36" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 #wrap {
