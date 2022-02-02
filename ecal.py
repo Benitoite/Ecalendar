@@ -31,8 +31,8 @@ with open('static/el1.html', 'w') as f:
 }
 
 #scaled-frame {
-  width: 1000px;
-  height: 90px;
+  width: 500px;
+  height: 70px;
   border: 0px;
 }
 
@@ -56,7 +56,7 @@ with open('static/el1.html', 'w') as f:
     0 1px 1px black, 
     0 2px 2px cyan;">''')
     
-    print('<div id="wrap" style="position:absolute; top: 0px; right: 0px;"><iframe id="scaled-frame"   frameBorder="0" src="https://17230.ddns.net/static/pac.html"></iframe></div>')
+    print('<div id="wrap" style="position:relative; top: 0px; right: 0px;"><iframe id="scaled-frame"   frameBorder="0" src="https://17230.ddns.net/static/pac.html"></iframe></div>')
     print('<h1>Today is '+str(today.isoformat()[:10]))
     
     print('<center><h1 style="text-shadow:0 0 1px black,0 5px 10px black,0 10px 20px cyan;font-family:Helvetica;font-size:255px;">')
