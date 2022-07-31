@@ -4,7 +4,7 @@ import os
 
 os.system("touch static/el1.html")
 today = datetime.today()
-electionday = datetime(2022, 6, 7, 0, 0, 0) 
+electionday = datetime(2022, 11, 8, 0, 0, 0) 
 diff = today - electionday
 numdays = int(diff.days)
 
@@ -70,20 +70,8 @@ with open('static/el1.html', 'w') as f:
             
     print('</h1><font size=3></center>')
 
-    if (numdays >= -155) & (numdays <= -118):
-      print('<hr><h1 style="font-size:24px;">SIGNATURES IN LIEU OF FILING FEE PERIOD (E- 155 to 118)<p><h2 style="font-size:18px;">All state and county offices (except for Board of Supervisors) for which there is a filing fee')
-
-    if (numdays >= -147) & (numdays <= -118):
-      print('<hr><h1 style="font-size:24px;">SIGNATURES IN LIEU OF FILING FEE PERIOD (E- 147 to 118)<p><h2 style="font-size:18px;">All Board of Supervisors offices for which there is a filing fee.')
-
-    if (numdays >= -127) & (numdays <= -118):
-      print('<hr><h1 style="font-size:24px;">DECLARATION OF INTENTION PERIOD (E- 127 to 118)<p><h2 style="font-size:18px;">Judicial offices only. Incumbents must file during this period.')
-
     if (numdays == -125):
       print('<hr><h1 style="font-size:24px;">RESOLUTIONS TO BE SUBMITTED TO THE ROV (E- 125)<p><h2 style="font-size:18px;">Date for jurisdictions to submit resolutions calling for a candidate election to meet timeline for a full nomination period. The ROV encourages jurisdictions to provide a resolution as early as possible.')
-
-    if (numdays >= -117) & (numdays <= -113):
-      print('<hr><h1 style="font-size:24px;">DECLARATION OF INTENTION EXTENSION PERIOD (E- 117 to 113)<p><h2 style="font-size:18px;">If the incumbent judge has not filed a Declaration of Intention to succeed to the same office, then any other person, other than the incumbent, may file such a declaration during the extension period.')
 
     if (numdays == -113):
       print('<hr><h1 style="font-size:24px;">NOMINATION PERIOD OPENS (E- 113)<p><h2 style="font-size:18px;">First day candidates may pick up nomination documents at the office of the Registrar of Voters')
@@ -96,6 +84,9 @@ with open('static/el1.html', 'w') as f:
 
     if (numdays == -88):
       print('<hr><h1 style="font-size:24px;">NOMINATION PERIOD CLOSES (E- 88)<p><h2 style="font-size:18px;">Deadline to file (in the Office of the Registrar of Voters only) all required nomination documents.')
+
+    if (numdays == -88):
+      print('<hr><h1 style="font-size:24px;">LAST DAY FOR PROPONENTS TO WITHDRAW AN INITIATIVE (E- 88)<p><h2 style="font-size:18px;">Last day for proponents to withdraw an initiative that qualified for the ballot.')
 
     if (numdays >= -87) & (numdays <= -83):
       print('<hr><h1 style="font-size:24px;">NOMINATION EXTENSION PERIOD (E- 87 to 83)<p><h2 style="font-size:18px;">If the incumbent fails to file a Declaration of Candidacy by deadline for their office, there will be a 5-calendar-day extension during which any candidate, other than the incumbent, may file for said office.')
@@ -125,7 +116,7 @@ with open('static/el1.html', 'w') as f:
       print('<hr><h1 style="font-size:24px;">WRITE-IN CANDIDACY PERIOD (E- 57 to 14)<p><h2 style="font-size:18px;">Between these dates is the period for candidates to obtain and file write-in nomination documents in the Office of the Registrar of Voters.')
 
     if (numdays == -40):
-      print('<hr><h1 style="font-size:24px;">F.P.P.C. 1 st PRE-ELECTION STATEMENT DUE (E- 40)<p><h2 style="font-size:18px;">Deadline for financial disclosure report Form 460 covering the reporting period noted below or the day after the closing date of the last statement filed<p><h3>Reporting Period: January 1, 2022 to April 23, 2022')
+      print('<hr><h1 style="font-size:24px;">F.P.P.C. 1 st PRE-ELECTION STATEMENT DUE (E- 40)<p><h2 style="font-size:18px;">Deadline for financial disclosure report Form 460 covering the reporting period noted below or the day after the closing date of the last statement filed<p><h3>Reporting Period: July 1, 2022 to September 24, 2022')
 
     if (numdays == -29):
       print('<hr><h1 style="font-size:24px;">FIRST DAY TO BEGIN MAILING VOTE-BY-MAIL BALLOTS (E- 29)<p><h2 style="font-size:18px;">First day to begin mailing vote-by-mail ballots')
@@ -137,10 +128,13 @@ with open('static/el1.html', 'w') as f:
       print('<hr><h1 style="font-size:24px;">LAST DAY TO REGISTER TO VOTE FOR JUNE ELECTION (E- 15)<p><h2 style="font-size:18px;">Deadline to register to be eligible to vote in this election.')
 
     if (numdays == -12):
-      print('<hr><h1 style="font-size:24px;">F.P.P.C. 2 nd PRE-ELECTION STATEMENT DUE (E- 12)<p><h2 style="font-size:18px;">Deadline for financial disclosure report Form 460 covering the reporting period noted below or the day after the closing date of the last statement filed.<p><h3>Reporting Period: April 24, 2022 May 21, 2022')
+      print('<hr><h1 style="font-size:24px;">F.P.P.C. 2 nd PRE-ELECTION STATEMENT DUE (E- 12)<p><h2 style="font-size:18px;">Deadline for financial disclosure report Form 460 covering the reporting period noted below or the day after the closing date of the last statement filed.<p><h3>Reporting Period: September 25, 2022 to October 22, 2022')
 
-    if (numdays >= -29) & (numdays <= 0):
+    if (numdays >= -10) & (numdays <= 0):
       print('\VOTE CENTERS OPEN 10 DAYS BEFORE ELECTION DAY (E- 10 to 0)<p><h2 style="font-size:18px;">Vote Centers are open to all registered voters in Santa Clara County. Vote Centers are open to all registered voters in jurisdictions holding special elections. Any voter can go to any Vote Center location throughout the County. Hours may vary by location and locations may vary with each election – please see listing on our website at sccvote.com')
+
+    if (numdays >= -14) & (numdays <= 0):
+      print('\CONDITIONAL VOTER REGISTRATION (E- 14 to 0)<p><h2 style="font-size:18px;">Conditional Voter Registration is open for a full 14 days prior to the election and must be done in person at the Registrar of Voters office or at any Vote Center. Vote centers are open 11 days prior to the election. Vote centers hours of operations my vary. Please check our website for the latest information.')
 
     if (numdays == -7):
       print('<hr><h1 style="font-size:24px;">LAST DAY TO REQUEST VOTE-BY-MAIL BALLOT TO BE MAILED (E- 7)<p><h2 style="font-size:18px;">Deadline at 5:00 p.m. to submit a request for a Vote-by-Mail ballot to be mailed to voter.')
@@ -157,8 +151,8 @@ with open('static/el1.html', 'w') as f:
     if (numdays == 30):
       print('<hr><h1 style="font-size:24px;">OFFICIAL CANVASS OF VOTE (E+ 30)<p><h2 style="font-size:18px;">n the case of a voter whose signature does not match or is missing, the elections official is required to notify the voter at least 8 days before the certification of the election of an opportunity to update the voter\'s signature.')
 
-    if (numdays == 55):
-      print('<hr><h1 style="font-size:24px;">F.P.P.C. SEMI-ANNUAL STATEMENT DUE (E+ 55)<p><h2 style="font-size:18px;">Deadline for semi-annual financial disclosure report Form 460 covering the reporting period noted below or the day after the closing date of the last statement filed.<p><h3>Reporting Period: January 1, 2022 to June 30, 2022')
+    if (numdays == 84):
+      print('<hr><h1 style="font-size:24px;">F.P.P.C. SEMI-ANNUAL STATEMENT DUE (E+ 84)<p><h2 style="font-size:18px;">Deadline for semi-annual financial disclosure report Form 460 covering the reporting period noted below or the day after the closing date of the last statement filed.<p><h3>Reporting Period: July 1, 2022 to December 31, 2022')
 
     print('''</body></html>''')
     sys.stdout = original_stdout # Reset the standard output to its original value
